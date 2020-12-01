@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigame</title>
+    <style>
+        .bolha{
+            display: block;
+            background-color: cornflowerblue;
+            border-radius: 50%;
+            min-width: 10px;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            transition: display 1s;
+        }
+
+        .bolha:hover{
+            cursor: pointer;
+        }
+
+        .placar{
+            width: 200px;
+            height: 100px;
+            background-color: #000000;
+            color: rgb(240, 250, 250);
+            padding: 10px;
+        }
+
+        h3{
+            margin: 0 10px 0 0;
+        }
+
+        .pontos_positivos{
+            color: green;
+        }
+
+        .pontos_negativos{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="placar" class="placar">
+        <h3>Placar:</h3>
+        <p>Você: <span id="pontos_usuario" class="pontos_positivos">0</span></p>
+        <p>Máquina: <span id="pontos_maquina" class="pontos_negativos">0</span></p>
+    </div>
+    <div id="bolha" class="bolha"></div>
+
+    <script>
+        bolha.addEventListener('click', function(evento){
+            let pontos_usuario = document.getElementById('pontos_usuario')
+            let numero_de_pontos = parseInt(pontos_usuario.textContent)
+
+            pontos_usuario.textContent = numero_de_pontos + 1
+            gerar_bolha()
+            evento.stopPropagation()
+        })
+
+        placar.addEventListener('click', function(evento){
+            evento.stopPropagation()
+        })
+
+        document.addEventListener('click', function(evento){
+            let pontos_maquina = document.getElementById('pontos_maquina')
+            let numero_de_pontos = parseInt(pontos_maquina.textContent)
+
+            pontos_maquina.textContent = numero_de_pontos + 1
+
+            gerar_bolha()
+            evento.stopPropagation()
+        })
+
+        function gerar_inteiro_aleatorio(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function gerar_bolha(){
+            let bolha = document.getElementById('bolha')
+            let tamanho = gerar_inteiro_aleatorio(10, 600)
+            let esquerda = gerar_inteiro_aleatorio(0, 2000)
+            let top = gerar_inteiro_aleatorio(0, 2000)
+            let cor01 = gerar_inteiro_aleatorio(0, 255)
+            let cor02 = gerar_inteiro_aleatorio(0, 255)
+            let cor03 = gerar_inteiro_aleatorio(0, 255)
+
+            bolha.style.display = 'none'
+
+            bolha.style.width = tamanho + 'px'
+            bolha.style.height = tamanho + 'px'
+            bolha.style.left = esquerda + 'px'
+            bolha.style.left = top + 'px'
+            bolha.style.display = 'block'
+            bolha.style.backgroundColor = 'rgb(' + cor01 + ',' + cor02 + ',' + cor03 + ')'
+        }
+    </script>
+</body>
+</html>
