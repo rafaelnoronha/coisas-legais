@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stx_gray: {
+                10: '#FBFAFD',
+                50: '#ECECEF',
+                100: '#DCDCDE',
+                200: '#BFBFC3',
+                300: '#A4A3A8',
+                400: '#89888D',
+                500: '#737278',
+                600: '#626168',
+                700: '#535158',
+                800: '#434248',
+                900: '#333238',
+                950: '#1F1E24',
+            }
+          },
+          boxShadow: {
+            stx_button: 'inset 0 0 0 1px'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <button
+    class="
+          bg-white
+          text-stx_gray-900
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+        inline-flex
+          shadow
+          shadow-stx_button
+          shadow-stx_gray-200
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">Fazer Login</span></button>
+  <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button> -->
+</body>
+</html>
