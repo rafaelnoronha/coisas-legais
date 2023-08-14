@@ -5,27 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    const colors = {
+      stxGray: {
+          10: '#FBFAFD',
+          50: '#ECECEF',
+          100: '#DCDCDE',
+          200: '#BFBFC3',
+          300: '#A4A3A8',
+          400: '#89888D',
+          500: '#737278',
+          600: '#626168',
+          700: '#535158',
+          800: '#434248',
+          900: '#333238',
+          950: '#1F1E24',
+      }
+    }
+
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            stx_gray: {
-                10: '#FBFAFD',
-                50: '#ECECEF',
-                100: '#DCDCDE',
-                200: '#BFBFC3',
-                300: '#A4A3A8',
-                400: '#89888D',
-                500: '#737278',
-                600: '#626168',
-                700: '#535158',
-                800: '#434248',
-                900: '#333238',
-                950: '#1F1E24',
-            }
-          },
+          colors: colors,
           boxShadow: {
-            stx_button: 'inset 0 0 0 1px'
+            stxButtonHover: `inset 0 0 0 2px ${colors.stxGray[400]},0 2px 2px 0 rgba(0,0,0,.08)`,
+            stxButtonActive: 'inset 0 0 0 1px #626168,0 0 0 1px #fff,0 0 0 3px #428fdc'
+          },
+          transitionProperty: {
+            stxButton: 'color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out'
           }
         }
       }
@@ -35,8 +41,9 @@
 <body>
   <button
     class="
+          box-border
           bg-white
-          text-stx_gray-900
+          text-stxGray-900
           text-sm
           leading-4
           py-2
@@ -46,22 +53,43 @@
           border-0
           justify-center
           items-center
-        inline-flex
-          shadow
-          shadow-stx_button
-          shadow-stx_gray-200
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
           font-normal
           text-center
           align-middle
           select-none
           border-solid
+          old_transition-stxButton
+          transition-[color_.15s_ease-in-out,background-color_.15s_ease-in-out,border-color_.15s_ease-in-out,box-shadow_.15s_ease-in-out]
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxGray-50
+          hover:border-solid
+          hover:border-stxGray-400
+          old_hover:shadow-[inset_0_0_0_2px_#89888d,0_2px_2px_0_rgba(0,0,0,.08)]
+          hover:shadow-stxButtonHover
+
+          old_active:shadow-stxButtonActive
+          active:shadow-[inset_0_0_0_1px_#626168,0_0_0_1px_#fff,0_0_0_3px_#428fdc]
+          active:bg-stxGray-100
+          active:outline-none
+
+          old_focus:shadow-stxButtonActive
+          focus:shadow-[inset_0_0_0_1px_#626168,0_0_0_1px_#fff,0_0_0_3px_#428fdc]
+          focus:bg-stxGray-100
+          focus:outline-none
     "><span 
       class="
         overflow-hidden
         text-ellipsis
         whitespace-nowrap
         py-px
-    ">Fazer Login</span></button>
+    ">Exemple Button</span></button>
   <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button> -->
 </body>
 </html>
