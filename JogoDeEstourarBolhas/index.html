@@ -19,7 +19,150 @@
           800: '#434248',
           900: '#333238',
           950: '#1F1E24',
-      }
+      },
+      stxBlue: {
+          50: '#E9F3FC',
+          100: '#CBE2F9',
+          200: '#9DC7F1',
+          300: '#63A6E9',
+          400: '#428FDC',
+          500: '#1F75CB',
+          600: '#1068BF',
+          700: '#0B5CAD',
+          800: '#064787',
+          900: '#033464',
+          950: '#002850',
+      },
+      stxGreen: {
+          50: '#ECF4EE',
+          100: '#C3E6CD',
+          200: '#91D4A8',
+          300: '#52B87A',
+          400: '#2DA160',
+          500: '#108548',
+          600: '#217645',
+          700: '#24663B',
+          800: '#0D532A',
+          900: '#0A4020',
+          950: '#072B15',
+      },
+      stxGreen: {
+          50: '#FDF1DD',
+          100: '#F5D9A8',
+          200: '#E9BE74',
+          300: '#D99530',
+          400: '#C17D10',
+          500: '#AB6100',
+          600: '#9E5400',
+          700: '#8F4700',
+          800: '#703800',
+          900: '#5C2900',
+          950: '#421F00',
+      },
+      stxRed: {
+          50: '#FCF1EF',
+          100: '#FDD4CD',
+          200: '#FCB5AA',
+          300: '#F57F6C',
+          400: '#EC5941',
+          500: '#DD2B0E',
+          600: '#C91C00',
+          700: '#AE1800',
+          800: '#8D1300',
+          900: '#660E00',
+          950: '#4D0A00',
+      },
+      stxPurple: {
+          50: '#F4F0FF',
+          100: '#E1D8F9',
+          200: '#CBBBF2',
+          300: '#AC93E6',
+          400: '#9475DB',
+          500: '#7B58CF',
+          600: '#694CC0',
+          700: '#5943B6',
+          800: '#453894',
+          900: '#2F2A6B',
+          950: '#232150',
+      },
+      stxThemeIndigo: {
+          50: '#F1F1FF',
+          100: '#DBDBF8',
+          200: '#C7C7F2',
+          300: '#A2A2E6',
+          400: '#8181D7',
+          500: '#6666C4',
+          600: '#5252B5',
+          700: '#41419F',
+          800: '#303083',
+          900: '#222261',
+          950: '#14143D',
+      },
+      stxThemeDarkBlue: {
+          50: '#CDD8E3',
+          100: '#B9CADC',
+          200: '#A6BDD5',
+          300: '#81A5C9',
+          400: '#628EB9',
+          500: '#4977A5',
+          600: '#346596',
+          700: '#235180',
+          800: '#153C63',
+          900: '#0B2640',
+          950: '#04101C',
+      },
+      stxThemeLightBlue: {
+          50: '#DDE6EE',
+          100: '#C1D4E6',
+          200: '#A0BEDC',
+          300: '#74A3D3',
+          400: '#4F8BC7',
+          500: '#3476B9',
+          600: '#2268AE',
+          700: '#145AA1',
+          800: '#0E4D8D',
+          900: '#0C4277',
+          950: '#0A3764',
+      },
+      stxThemeGreen: {
+          50: '#DDE9DE',
+          100: '#B1D6B5',
+          200: '#8CC497',
+          300: '#69AF7D',
+          400: '#499767',
+          500: '#308258',
+          600: '#25744C',
+          700: '#1B653F',
+          800: '#155635',
+          900: '#0E4328',
+          950: '#052E19',
+      },
+      stxThemeDarkRed: {
+          50: '#F4E9E7',
+          100: '#ECD3D0',
+          200: '#E3BAB5',
+          300: '#D59086',
+          400: '#C66E60',
+          500: '#AD4A3B',
+          600: '#A13322',
+          700: '#8F2110',
+          800: '#761405',
+          900: '#580D02',
+          950: '#380700',
+      },
+      stxThemeLightkRed: {
+          50: '#FAF2F1',
+          100: '#F6D9D5',
+          200: '#EBADA2',
+          300: '#E07F6F',
+          400: '#D36250',
+          500: '#C24B38',
+          600: '#B53A26',
+          700: '#A02E1C',
+          800: '#8B2212',
+          900: '#751709',
+          950: '#5C1105',
+      },
     }
 
     tailwind.config = {
@@ -28,10 +171,20 @@
           colors: colors,
           boxShadow: {
             stxButtonHover: `inset 0 0 0 2px ${colors.stxGray[400]},0 2px 2px 0 rgba(0,0,0,.08)`,
-            stxButtonActive: 'inset 0 0 0 1px #626168,0 0 0 1px #fff,0 0 0 3px #428fdc'
+            stxButtonActive: `inset 0 0 0 1px ${colors.stxGray[600]},0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
+            stxConfirmButtonHover: `inset 0 0 0 2px ${colors.stxBlue[800]},0 2px 2px 0 rgba(0,0,0,.08)`,
+            stxConfirmButtonActive: `inset 0 0 0 1px ${colors.stxBlue[900]},0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
+            stxDangerButtonHover: `inset 0 0 0 2px ${colors.stxRed[800]},0 2px 2px 0 rgba(0,0,0,.08)`,
+            stxDangerButtonActive: `inset 0 0 0 1px ${colors.stxRed[900]},0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
+
+            stxDashedButtonActive: `inset 0 0 0 1px ${colors.stxGray[600]},0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
+            stxLinkButtonActive: `0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
           },
           transitionProperty: {
             stxButton: 'color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out'
+          },
+          outlineOffset: {
+            n1: '-1px'
           }
         }
       }
@@ -63,24 +216,19 @@
           align-middle
           select-none
           border-solid
-          old_transition-stxButton
-          transition-[color_.15s_ease-in-out,background-color_.15s_ease-in-out,border-color_.15s_ease-in-out,box-shadow_.15s_ease-in-out]
+          transition-stxButton
 
           hover:no-underline
           hover:cursor-pointer
           hover:bg-stxGray-50
           hover:border-solid
-          hover:border-stxGray-400
-          old_hover:shadow-[inset_0_0_0_2px_#89888d,0_2px_2px_0_rgba(0,0,0,.08)]
           hover:shadow-stxButtonHover
 
-          old_active:shadow-stxButtonActive
-          active:shadow-[inset_0_0_0_1px_#626168,0_0_0_1px_#fff,0_0_0_3px_#428fdc]
+          active:shadow-stxButtonActive
           active:bg-stxGray-100
           active:outline-none
 
-          old_focus:shadow-stxButtonActive
-          focus:shadow-[inset_0_0_0_1px_#626168,0_0_0_1px_#fff,0_0_0_3px_#428fdc]
+          focus:shadow-stxButtonActive
           focus:bg-stxGray-100
           focus:outline-none
     "><span 
@@ -89,7 +237,183 @@
         text-ellipsis
         whitespace-nowrap
         py-px
-    ">Exemple Button</span></button>
+    ">primary default</span></button>
+
+    <button
+    class="
+          box-border
+          bg-stxBlue-500
+          text-white
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxBlue-600
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxBlue-600
+          hover:border-solid
+          hover:shadow-stxConfirmButtonHover
+
+          active:shadow-stxConfirmButtonActive
+          active:bg-stxBlue-700
+          active:outline-none
+
+          focus:shadow-stxConfirmButtonActive
+          focus:bg-stxBlue-700
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary primary</span></button>
+
+    <button
+    class="
+          box-border
+          bg-stxRed-500
+          text-white
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxRed-600
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxRed-600
+          hover:border-solid
+          hover:shadow-stxDangerButtonHover
+
+          active:shadow-stxDangerButtonActive
+          active:bg-stxRed-700
+          active:outline-none
+
+          focus:shadow-stxDangerButtonActive
+          focus:bg-stxRed-700
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary danger</span></button>
+
+
+    <button
+    class="
+          box-border
+          bg-white
+          text-stxGray-900
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+          outline-dotted
+          outline-3
+          outline-white
+          outline-offset-n1
+
+          active:shadow-stxDashedButtonActive
+          active:bg-stxGray-100
+          active:outline-dotted
+          active:outline-3
+          active:outline-white
+          active:outline-offset-n1
+
+          focus:shadow-stxDashedButtonActive
+          focus:bg-stxGray-100
+          focus:outline-dotted
+          focus:outline-3
+          focus:outline-white
+          focus:outline-offset-n1
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary dashed</span></button>
+
+
+    <button
+    class="
+          box-border
+          bg-transparent
+          border-0
+          text-sm
+          leading-4
+          text-stxBlue-500
+          py-0
+          px-0
+          shadow-none
+          
+          hover:bg-transparent
+          hover:text-stxBlue-500
+          hover:underline
+
+          active:bg-transparent
+          active:text-stxBlue-500
+          active:underline
+          active:shadow-stxLinkButtonActive
+          active:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary default</span></button>
   <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button> -->
 </body>
 </html>
