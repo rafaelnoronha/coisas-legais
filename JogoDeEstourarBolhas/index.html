@@ -179,6 +179,9 @@
 
             stxDashedButtonActive: `inset 0 0 0 1px ${colors.stxGray[600]},0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
             stxLinkButtonActive: `0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
+
+            stxConfirmSecondaryButtonHover: `inset 0 0 0 2px ${colors.stxBlue[700]},0 2px 2px 0 rgba(0,0,0,.08)`,
+            stxConfirmSecondaryButtonFocus: `inset 0 0 0 1px ${colors.stxBlue[700]},0 0 0 1px #fff,0 0 0 3px ${colors.stxBlue[400]}`,
           },
           transitionProperty: {
             stxButton: 'color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out'
@@ -192,6 +195,8 @@
   </script>
 </head>
 <body>
+  <br>
+
   <button
     class="
           box-border
@@ -368,11 +373,10 @@
           active:bg-stxGray-100
           active:outline-dotted
           active:outline-3
-          active:outline-white
+          active:outline-stxGray-100
           active:outline-offset-n1
 
           focus:shadow-stxDashedButtonActive
-          focus:bg-stxGray-100
           focus:outline-dotted
           focus:outline-3
           focus:outline-white
@@ -435,6 +439,550 @@
         whitespace-nowrap
         py-px
     ">primary default</span></button>
-  <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button> -->
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+
+
+
+
+
+    
+
+
+
+
+
+    <button
+    class="
+          box-border
+          bg-white
+          text-stxGray-900
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxGray-50
+          hover:border-solid
+          hover:shadow-stxButtonHover
+
+          active:shadow-stxButtonActive
+          active:bg-stxGray-100
+          active:outline-none
+
+          focus:shadow-stxButtonActive
+          focus:bg-stxGray-100
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary default</span></button>
+
+    <button
+    class="
+          box-border
+          bg-white
+          text-stxBlue-500
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxBlue-500
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxBlue-50
+          hover:border-solid
+          hover:text-stxBlue-700
+          hover:shadow-stxConfirmSecondaryButtonHover
+
+          active:shadow-stxConfirmButtonActive
+          active:bg-stxBlue-100
+          active:text-stxBlue-900
+          active:outline-none
+
+          focus:shadow-stxConfirmSecondaryButtonFocus
+          focus:bg-stxBlue-50
+          focus:text-stxBlue-700
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary primary</span></button>
+
+    <button
+    class="
+          box-border
+          bg-stxRed-500
+          text-white
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxRed-600
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxRed-600
+          hover:border-solid
+          hover:shadow-stxDangerButtonHover
+
+          active:shadow-stxDangerButtonActive
+          active:bg-stxRed-700
+          active:outline-none
+
+          focus:shadow-stxDangerButtonActive
+          focus:bg-stxRed-700
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary danger</span></button>
+
+
+    <button
+    class="
+          box-border
+          bg-white
+          text-stxGray-900
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+          outline-dotted
+          outline-3
+          outline-white
+          outline-offset-n1
+
+          active:shadow-stxDashedButtonActive
+          active:bg-stxGray-100
+          active:outline-dotted
+          active:outline-3
+          active:outline-stxGray-100
+          active:outline-offset-n1
+
+          focus:shadow-stxDashedButtonActive
+          focus:outline-dotted
+          focus:outline-3
+          focus:outline-white
+          focus:outline-offset-n1
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary dashed</span></button>
+
+
+    <button
+    class="
+          box-border
+          bg-transparent
+          border-0
+          text-sm
+          leading-4
+          text-stxBlue-500
+          py-0
+          px-0
+          shadow-none
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+          
+          hover:bg-transparent
+          hover:text-stxBlue-500
+          hover:underline
+
+          active:bg-transparent
+          active:text-stxBlue-500
+          active:underline
+          active:shadow-stxLinkButtonActive
+          active:outline-none
+
+          focus:bg-transparent
+          focus:text-stxBlue-500
+          focus:underline
+          focus:shadow-stxLinkButtonActive
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary default</span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button
+    class="
+          box-border
+          bg-white
+          text-stxGray-900
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxGray-50
+          hover:border-solid
+          hover:shadow-stxButtonHover
+
+          active:shadow-stxButtonActive
+          active:bg-stxGray-100
+          active:outline-none
+
+          focus:shadow-stxButtonActive
+          focus:bg-stxGray-100
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary default</span></button>
+
+    <button
+    class="
+          box-border
+          bg-stxBlue-500
+          text-white
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxBlue-600
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxBlue-600
+          hover:border-solid
+          hover:shadow-stxConfirmButtonHover
+
+          active:shadow-stxConfirmButtonActive
+          active:bg-stxBlue-700
+          active:outline-none
+
+          focus:shadow-stxConfirmButtonActive
+          focus:bg-stxBlue-700
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary primary</span></button>
+
+    <button
+    class="
+          box-border
+          bg-stxRed-500
+          text-white
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxRed-600
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+
+          hover:no-underline
+          hover:cursor-pointer
+          hover:bg-stxRed-600
+          hover:border-solid
+          hover:shadow-stxDangerButtonHover
+
+          active:shadow-stxDangerButtonActive
+          active:bg-stxRed-700
+          active:outline-none
+
+          focus:shadow-stxDangerButtonActive
+          focus:bg-stxRed-700
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary danger</span></button>
+
+
+    <button
+    class="
+          box-border
+          bg-white
+          text-stxGray-900
+          text-sm
+          leading-4
+          py-2
+          px-3
+          fill-current
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+          outline-dotted
+          outline-3
+          outline-white
+          outline-offset-n1
+
+          active:shadow-stxDashedButtonActive
+          active:bg-stxGray-100
+          active:outline-dotted
+          active:outline-3
+          active:outline-stxGray-100
+          active:outline-offset-n1
+
+          focus:shadow-stxDashedButtonActive
+          focus:outline-dotted
+          focus:outline-3
+          focus:outline-white
+          focus:outline-offset-n1
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary dashed</span></button>
+
+
+    <button
+    class="
+          box-border
+          bg-transparent
+          border-0
+          text-sm
+          leading-4
+          text-stxBlue-500
+          py-0
+          px-0
+          shadow-none
+          rounded
+          border-0
+          justify-center
+          items-center
+          inline-flex
+
+          shadow-[inset_0_0_0_1px]
+          shadow-stxGray-200
+
+          font-normal
+          text-center
+          align-middle
+          select-none
+          border-solid
+          transition-stxButton
+          
+          hover:bg-transparent
+          hover:text-stxBlue-500
+          hover:underline
+
+          active:bg-transparent
+          active:text-stxBlue-500
+          active:underline
+          active:shadow-stxLinkButtonActive
+          active:outline-none
+
+          focus:bg-transparent
+          focus:text-stxBlue-500
+          focus:underline
+          focus:shadow-stxLinkButtonActive
+          focus:outline-none
+    "><span 
+      class="
+        overflow-hidden
+        text-ellipsis
+        whitespace-nowrap
+        py-px
+    ">primary default</span></button>
 </body>
 </html>
